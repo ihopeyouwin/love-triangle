@@ -36,6 +36,7 @@ module.exports = function getLoveTrianglesCount(preferences = []) {
       if( cc == 3)
       {
         count++;
+        cc = 0;
       }
     }
     else
@@ -43,6 +44,5 @@ module.exports = function getLoveTrianglesCount(preferences = []) {
       continue;
     }
   }
-  cc = cc / 3;
   return count;
 }
