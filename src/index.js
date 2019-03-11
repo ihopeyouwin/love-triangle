@@ -27,22 +27,18 @@ getLoveTrianglesCount();
  */
 module.exports = function getLoveTrianglesCount(preferences = []) {
   var cc = 0;
-  var count = 0;
   for( var i = 0; i < preferences.length; i++)
   {
     if ( i == preferences [ preferences [preferences [i]-1]-1]-1)
     {
-      cc++;
-      if( cc == 3)
+      if(i == preferences[i]-1)
       {
-        count++;
-        cc = 0;
+        continue;
       }
+      cc++;
     }
-    else
-    {
-      continue;
-    }
+
   }
-  return count;
+  cc = cc/3;
+  return cc;
 }
